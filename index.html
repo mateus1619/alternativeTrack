@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rastreamento</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.js"
+      integrity="sha512-CX7sDOp7UTAq+i1FYIlf9Uo27x4os+kGeoT7rgwvY+4dmjqV0IuE/Bl5hVsjnQPQiTOhAX1O2r2j5bjsFBvv/A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxy/1.6.1/scripts/jquery.ajaxy.js"
+      integrity="sha512-4WpSQe8XU6Djt8IPJMGD9Xx9KuYsVCEeitZfMhPi8xdYlVA5hzRitm0Nt1g2AZFS136s29Nq4E4NVvouVAVrBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand navbar-light">
+      <!-- Título do site  -->
+      <h1><a class="navbar-brand fs-2 ms-2 text-white title shadow" href="/">Bem vindo!</a></h1>
+
+      <div class="container-fluid d-flex justify-content-end">
+        <ul class="navbar-nav">
+          <!-- Botão para Search  -->
+          <li class="nav-item">
+            <form class="d-flex" id="form">
+              <input class="form-control input border-1 bg-transparent text-white text-opacity-100%" id="inputsearch" type="search" name="lista" placeholder="Procure" />
+              <span class="btn rounded-2 shadow-lg" id="buttonsearch" href=""><img src="assets/icons/search.svg" alt="Search" /></span>
+            </form>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container-fluid">
+      <div class="text-white" id="inicio">
+        <div class="mt-3 border-2 rounded-1">
+          <p class="fs-5 mt-3 shadow">Clique na lupa e digite o número do<br/>seu pedido</p>
+        </div>
+      </div>
+
+      <div class="text-white resultdivall">
+        <div class="ms-3 ps-3 mt-4 border-start border-3 rounded-1">
+          <p class="" id="resultPedido"></p>
+          <div class="">
+            <span class="btn bg-white mt-3 shadow" id="reset">Reset</span>
+            <span class="btn bg-white mt-3 shadow" id="novaConsulta">Nova consulta</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <script src="assets/js/user_interation.js"></script>
+    <script src="assets/js/request.js"></script>
+  </body>
+</html>
