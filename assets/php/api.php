@@ -56,13 +56,13 @@ for($i=1; $i < sizeof($history); ++$i) {
     $descricao = $decod['data']['trackingStatus']['tracking']['history'][$i - 1]['micro_state']['description'];
 
     # Formatando o Horário 'str_replace()' #
-    $horaFormat0 = str_replace('T', " ", $dataHora);
-    $horaFormat1 = str_replace('+00:00', " ", $horaFormat0);
-    $horaFormat2 = str_replace('-', "/", $horaFormat1);
+    $horaFormat = str_replace('T', " ", $dataHora);
+    $horaFormat = str_replace('+00:00', " ", $horaFormat);
+    $horaFormat = str_replace('-', "/", $horaFormat);
 
     # Excluindo os caracteres :00 #
     $regex = '/[0-9]{4}\/[0-9]{2}\/[0-9]{2} [0-9]{2}:[0-9]{2}/';
-    preg_match_all($regex, $horaFormat2, $matches);
+    preg_match_all($regex, $horaFormat, $matches);
 
     if( !empty($matches) ) {
         foreach($matches[0] as $match) {
